@@ -43,6 +43,7 @@ https://github.com/htang2021/orm-ecommerce
 
 ## Walk-Thru Video Link
 
+https://drive.google.com/file/d/1MeOw88JCo9aP0dnUCYliNNzitQjAxU7o/view
 
 ## Deploy Your Project
 This instruction below assumes that a project and repo were already created on github and that they are already linked as appropriate.
