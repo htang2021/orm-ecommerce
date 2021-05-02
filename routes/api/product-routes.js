@@ -93,12 +93,6 @@ router.post('/', (req, res) => {
 // update product
 router.put('/:id', (req, res) => {
   // update product data
-  // console.log("***********************");
-  // console.log("req body is: " ,req.body);
-  // console.log("***********************");
-  // console.log("res is below:");
-  // console.log(res);
-  // console.log("@@@@@@@@@@@@ RES Above @@@@@@@@@@@@@@@@");
   Product.update(req.body, {
     where: {
       id: req.params.id,
@@ -106,23 +100,13 @@ router.put('/:id', (req, res) => {
   })
     .then((product) => {
       // find all associated tags from ProductTag
-      // console.log("Product object below: ");
-      // console.log(product);
-      // console.log("product object above");
       return ProductTag.findAll({ where: { product_id: req.params.id } });
     })
     .then((productTags) => {
-      // get list of current tag_ids
-      // console.log("productTags object below: ");
-      // console.log(productTags);
-      // console.log("productTags object above");
+      
       const productTagIds = productTags.map(({ tag_id }) => tag_id);
       // create filtered list of new tag_ids
-      // console.log("productTagIds below:");
-      // console.log(productTagIds);
-      // console.log("productTagIds above");
-      // console.log("=======================");
-      // const newProductTags = req.body.tagIds
+      // const newProductTags = req.body.tagIds (original line)
       const newProductTags = productTagIds
         .filter((tag_id) => !productTagIds.includes(tag_id))
         .map((tag_id) => {
@@ -133,8 +117,8 @@ router.put('/:id', (req, res) => {
         });
       // figure out which ones to remove
       const productTagsToRemove = productTagIds
-      // const productTagsToRemove = productTags
-        // .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id))
+      // const productTagsToRemove = productTags (original line)
+        // .filter(({ tag_id }) => !req.body.tagIds.includes(tag_id)) (original line)
         .filter(({ tag_id }) => !productTagIds.includes(tag_id))
         .map(({ id }) => id);
 
