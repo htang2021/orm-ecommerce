@@ -26,15 +26,15 @@ The following animations show examples of the application's API routes being tes
 
 The first animation shows GET routes to return all categories, all products, and all tags being tested in Insomnia Core:
 
-![](./assets/images/mockup-1.gif)
+![](./assets/images/13-orm-homework-demo-01.gif)
 
 The second animation shows GET routes to return a single category, a single product, and a single tag being tested in Insomnia Core:
 
-![](./assets/images/mockup-2.gif)
+![](./assets/images/13-orm-homework-demo-02.gif)
 
 The final animation shows the POST, PUT, and DELETE routes for categories being tested in Insomnia Core:
 
-![](./assets/images/mockup-3.gif)
+![](./assets/images/13-orm-homework-demo-03.gif)
 
 ## Github Repository
 All files and changes made are located on github at the following location:
