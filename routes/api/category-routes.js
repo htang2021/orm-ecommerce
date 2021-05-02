@@ -21,6 +21,7 @@ router.get('/', (req, res) => {
     });
 });
 
+// Route to a Category GET endpoint by ID
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
@@ -60,6 +61,7 @@ router.post('/', (req, res) => {
   });
 });
 
+// Route to the endpoint to update a category
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
   Category.update(
@@ -85,6 +87,7 @@ router.put('/:id', (req, res) => {
   });
 });
 
+// Deleting a category by ID
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
